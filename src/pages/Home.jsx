@@ -1,31 +1,27 @@
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import backgroundImage from "../assets/mainimg.jpg"; // Add a suitable background image
 import backgImageWebp from "../assets/mainimg.webp";
 import contactImageJpg from "../assets/Raju.jpg";
 import contactImageWebp from "../assets/Raju.webp";
 import { keyframes } from "@emotion/react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon directly
-import { faPhone } from '@fortawesome/free-solid-svg-icons'; // Import icon directly
-import { Helmet } from 'react-helmet';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon directly
+import { faPhone } from "@fortawesome/free-solid-svg-icons"; // Import icon directly
+import { Helmet } from "react-helmet";
 const isWebpSupported = () => {
   const canvas = document.createElement("canvas");
   return canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
 };
 
-
-
 function Home() {
-useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  
   return (
     <>
-
-<Helmet>
-<title>BK Enterprises - Your Trusted Business Solutions Partner</title>
+      <Helmet>
+        <title>BK Enterprises - Your Trusted Business Solutions Partner</title>
         <meta
           name="description"
           content="Welcome to BK Enterprises, a leading provider of innovative business solutions. We help businesses streamline operations and achieve sustainable growth through technology and expertise."
@@ -125,24 +121,28 @@ useEffect(() => {
 
       <section className="contact-info" style={contactInfoStyle}>
         <div style={contactContentStyle}>
-        <picture>
-      <source srcSet={contactImageWebp} type="image/webp" />
-      <img src={contactImageJpg} alt="Contact Us" loading="lazy" style={imageStyle} />
-    </picture>
+          <picture>
+            <source srcSet={contactImageWebp} type="image/webp" />
+            <img
+              src={contactImageJpg}
+              alt="Contact Us"
+              loading="lazy"
+              style={imageStyle}
+            />
+          </picture>
           <div style={textContentStyle}>
             <h1>
               We are here to help!!
               <br />
               Call us Today
-              <br />
-              <h6>
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  style={{ marginRight: "10px", color: "#f4a261" }}
-                />
-                +9190 214 62299
-              </h6>
             </h1>
+            <p>
+              <FontAwesomeIcon
+                icon={faPhone}
+                style={{ marginRight: "10px", color: "#f4a261" }}
+              />
+              +9190 214 62299
+            </p>
           </div>
         </div>
       </section>
@@ -155,7 +155,6 @@ const bodyStyle = {
   fontFamily: "Arial, sans-serif",
   margin: "0", // Removes default margin
   padding: "0", // Removes default padding
-
 };
 const homeStyle = {
   backgroundImage: `
@@ -233,8 +232,6 @@ const servicesListStyle = {
   gap: "2rem", // Horizontal spacing between items
   marginBottom: "30px", // Bottom margin for spacing
 };
-
-
 
 const serviceItemStyle = {
   width: "45%",
@@ -348,7 +345,6 @@ const textContentStyle = {
   maxWidth: "500px",
   textAlign: "center", // Optional for better alignment
 };
-
 
 // Button Styles
 const buttonStyle = {

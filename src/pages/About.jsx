@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled,{ createGlobalStyle }  from 'styled-components';
-const backgroundImage = require("../assets/img6.jpg");
-const backImageWebp = require("../assets/img6.webp");
+import backgroundImage from "../assets/img6.jpg";
+import backImageWebp from "../assets/img6.webp";
 const Helmet = React.lazy(() => import('react-helmet'));
 
 const icons = {
@@ -18,6 +18,8 @@ const icons = {
   FaRegLightbulb: React.lazy(() => import('react-icons/fa').then(module => ({ default: module.FaRegLightbulb }))),
   FaHandshake: React.lazy(() => import('react-icons/fa').then(module => ({ default: module.FaHandshake }))),
   FaUsersCog: React.lazy(() => import('react-icons/fa').then(module => ({ default: module.FaUsersCog }))),
+  VFaRegClock :React.lazy(() => import('react-icons/fa').then(module => ({ default: module.FaRegClock }))),
+
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -197,7 +199,7 @@ function About() {
       </HeroSection>
 
       {/* Mission Section */}
-      <Section bgColor="#f0f8ff">
+      <Section >
         <SectionIcon>
         <icons.GoGoal />
         </SectionIcon>
@@ -277,7 +279,7 @@ function About() {
               <p><b>Customer-Centric Approach:</b> Your satisfaction is our priority. We work closely with you to understand your needs, providing personalized services that exceed expectations.</p>
             </li>
             <li>
-              <vFaRegClock  size={40} color="#f4a261" />
+              <icons.VFaRegClock  size={40} color="#f4a261" />
               <p><b>Timely and Efficient Service:</b> We value your time and are dedicated to completing projects within agreed timelines without compromising on quality.</p>
             </li>
             <li>
