@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 // Add your image import here
-import notFoundImage from "./assets/PageNotFound.jpg";  // Update with your actual image path
-import notFoundImageWebp from "./assets/PageNotFound.webp";
+import notFoundImage from "../assets/PageNotFound.jpg";  // Update with your actual image path
+import notFoundImageWebp from "../assets/PageNotFound.webp";
 const NotFound = () => {
   return (
     <NotFoundContainer>
