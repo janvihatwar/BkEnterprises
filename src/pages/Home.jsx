@@ -8,6 +8,7 @@ import { keyframes } from "@emotion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon directly
 import { faPhone } from "@fortawesome/free-solid-svg-icons"; // Import icon directly
 import { Helmet } from "react-helmet";
+import "./Home.css";
 const isWebpSupported = () => {
   const canvas = document.createElement("canvas");
   return canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
@@ -76,25 +77,25 @@ function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="services-overview" style={servicesOverviewStyle}>
-        <h3 style={servicesHeadingStyle}>Explore Our Expertise</h3>
-        <p style={servicesDescriptionStyle}>
+      <section style={styles.servicesOverviewStyle}>
+        <h3 style={styles.servicesHeadingStyle}>Explore Our Expertise</h3>
+        <p style={styles.servicesDescriptionStyle}>
           We specialize in two core areas that drive innovation and efficiency
           in industries across the board:
         </p>
-        <div style={servicesListStyle}>
-          <div style={serviceItemStyle}>
-            <h4 style={serviceTitleStyle}>Electrical Services</h4>
-            <p style={serviceDescriptionStyle}>
+        <div style={styles.servicesListStyle}>
+          <div style={styles.serviceItemStyle}>
+            <h4 style={styles.serviceTitleStyle}>Electrical Services</h4>
+            <p style={styles.serviceDescriptionStyle}>
               From complex electrical installations to regular maintenance, our
               team ensures your electrical needs are met with safety and
               precision. We focus on innovative solutions that optimize energy
               use and increase reliability.
             </p>
           </div>
-          <div style={serviceItemStyle}>
-            <h4 style={serviceTitleStyle}>Mechanical Services</h4>
-            <p style={serviceDescriptionStyle}>
+          <div style={styles.serviceItemStyle}>
+            <h4 style={styles.serviceTitleStyle}>Mechanical Services</h4>
+            <p style={styles.serviceDescriptionStyle}>
               Our mechanical expertise covers a wide range of services, from
               equipment installation to troubleshooting. We deliver solutions
               that are both cost-effective and high-performing, tailored to the
@@ -103,15 +104,16 @@ function Home() {
           </div>
         </div>
 
-        <Link to="/services#start">
+        <Link to="/services">
           <button
-            style={buttonStyle}
+            style={styles.buttonStyle}
             onMouseEnter={(e) =>
               (e.target.style.backgroundColor =
-                buttonHoverStyle.backgroundColor)
+                styles.buttonHoverStyle.backgroundColor)
             }
             onMouseLeave={(e) =>
-              (e.target.style.backgroundColor = buttonStyle.backgroundColor)
+              (e.target.style.backgroundColor =
+                styles.buttonStyle.backgroundColor)
             }
           >
             Discover Our Full Range of Services
@@ -120,7 +122,7 @@ function Home() {
       </section>
 
       <section className="contact-info" style={contactInfoStyle}>
-        <div style={contactContentStyle}>
+        <div className="contact-content">
           <picture>
             <source srcSet={contactImageWebp} type="image/webp" />
             <img
@@ -171,7 +173,7 @@ const homeStyle = {
   textAlign: "center",
 };
 const headingStyle = {
-  fontSize: "2.4rem",
+  fontSize: "2.2rem",
   padding: "0.5rem",
   fontWeight: "bold",
   margin: "0",
@@ -196,7 +198,7 @@ const paragraphStyle = {
 };
 
 const boldTextStyle = {
-  fontSize: "2.5rem",
+  fontSize: "2.2rem",
   fontWeight: "bold",
   marginTop: "10px",
   padding: "1.5rem",
@@ -205,64 +207,72 @@ const boldTextStyle = {
 };
 
 // Services Overview Section Styles
-const servicesOverviewStyle = {
-  padding: "3rem",
-  borderRadius: "10px",
-  textAlign: "center",
-  boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)", // Adds a subtle shadow for depth
-};
-
-const servicesHeadingStyle = {
-  fontSize: "2rem",
-  fontWeight: "bold",
-  marginBottom: "20px",
-  color: "#333",
-};
-
-const servicesDescriptionStyle = {
-  fontSize: "1.2rem",
-  marginBottom: "30px",
-  lineHeight: "1.6",
-  color: "#333",
-};
-
-const servicesListStyle = {
-  display: "flex",
-  flexDirection: "row", // Default to horizontal layout
-  gap: "2rem", // Horizontal spacing between items
-  marginBottom: "30px", // Bottom margin for spacing
-};
-
-const serviceItemStyle = {
-  width: "45%",
-  padding: "1rem",
-  backgroundColor: "#fff",
-  boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", // Box shadow for depth
-};
-
-const serviceTitleStyle = {
-  fontSize: "1.8rem",
-  fontWeight: "bold",
-  color: "#e76f51",
-  marginBottom: "10px",
-};
-
-const serviceDescriptionStyle = {
-  fontSize: "1rem",
-  color: "#333",
-  lineHeight: "1.5",
-};
 
 const styles = {
+  servicesOverviewStyle: {
+    padding: "3rem",
+    borderRadius: "10px",
+    textAlign: "center",
+    boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)", // Adds a subtle shadow for depth
+  },
+  servicesHeadingStyle: {
+    fontSize: "2rem",
+    fontWeight: "bold",
+    marginBottom: "20px",
+    color: "#333",
+  },
+  servicesDescriptionStyle: {
+    fontSize: "1.2rem",
+    marginBottom: "30px",
+    lineHeight: "1.6",
+    color: "#333",
+  },
+  servicesListStyle: {
+    display: "flex",
+    flexDirection: "row", // Default to horizontal layout
+    gap: "2rem", // Horizontal spacing between items
+    marginBottom: "30px", // Bottom margin for spacing
+  },
+  serviceItemStyle: {
+    width: "50%",
+    padding: "1rem",
+    backgroundColor: "#fff",
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", // Box shadow for depth
+  },
+  serviceTitleStyle: {
+    fontSize: "1.3rem",
+    fontWeight: "bold",
+    color: "#e76f51",
+    marginBottom: "20px",
+  },
+  serviceDescriptionStyle: {
+    fontSize: "0.8rem",
+    color: "#333",
+    lineHeight: "1.5",
+  },
+  buttonStyle: {
+    padding: "12px 25px",
+    fontSize: "1rem",
+    color: "#fff",
+    backgroundColor: "#e76f51",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+  },
+  buttonHoverStyle: {
+    backgroundColor: "#d65a3a",
+  },
+
+  // Responsive styles
   "@media (max-width: 768px)": {
     servicesOverviewStyle: {
       padding: "2rem",
     },
     servicesHeadingStyle: {
-      fontSize: "2rem",
+      fontSize: "1.7rem", // Adjust the heading size
     },
     servicesDescriptionStyle: {
-      fontSize: "1.1rem",
+      fontSize: "0.9rem", // Adjust the description font size
     },
     servicesListStyle: {
       flexDirection: "column", // Stack the services vertically on mobile
@@ -276,11 +286,41 @@ const styles = {
       fontSize: "1.5rem", // Adjust title size on mobile
     },
     serviceDescriptionStyle: {
-      fontSize: "0.9rem",
+      fontSize: "0.9rem", // Adjust service description font size
     },
     buttonStyle: {
       padding: "12px 25px",
-      fontSize: "1rem",
+      fontSize: "1rem", // Button font size adjustment
+    },
+  },
+
+  "@media (max-width: 450px)": {
+    servicesOverviewStyle: {
+      padding: "1rem", // Less padding for smaller screens
+    },
+    servicesHeadingStyle: {
+      fontSize: "1rem", // Minimize heading font size further
+    },
+    servicesDescriptionStyle: {
+      fontSize: "0.7rem", // Minimize description font size
+    },
+    servicesListStyle: {
+      flexDirection: "column", // Stack services vertically
+      gap: "0.8rem", // Reduce gap between items
+    },
+    serviceItemStyle: {
+      width: "100%",
+      padding: "1rem", // Reduce padding further
+    },
+    serviceTitleStyle: {
+      fontSize: "0.8rem", // Further reduce title size for small screens
+    },
+    serviceDescriptionStyle: {
+      fontSize: "0.6rem", // Minimize font size for descriptions
+    },
+    buttonStyle: {
+      padding: "8px 15px", // Reduce padding for smaller buttons
+      fontSize: "0.9rem", // Smaller font size for button text
     },
   },
 };
@@ -324,14 +364,7 @@ const contactInfoStyle = {
   animation: `${fadeIn} 1s ease-in-out`,
 };
 
-const contactContentStyle = {
-  display: "flex",
-  fontSize: "1.3rem",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "10rem", // Gap between image and text
-  flexWrap: "wrap", // Adjust layout for smaller screens
-};
+
 
 const imageStyle = {
   width: "200px",

@@ -11,7 +11,7 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
-
+const NotFound = lazy(() => import('./pages/NotFound'));
 // Global styles
 const GlobalStyle = createGlobalStyle`
   body {
@@ -38,7 +38,7 @@ function App() {
   "@type": "LocalBusiness",
   "name": "B K Enterprises",
   "description": "BK Enterprises provides top-notch electrical and mechanical services, catering to residential, commercial, and industrial needs.",
-  "url": "https://bkenterprises.netlify.app",
+  "url": "https://bk-enterprises.vercel.app/",
   "telephone": "+91 90214 62299",
   "email": "bkelerewinding@gmail.com",
   "address": {
@@ -99,6 +99,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />

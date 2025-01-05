@@ -1,0 +1,56 @@
+@media (max-width: 500px) {
+  #info {
+    gap: 5rem; /* Adjust gap to 5rem at 450px and below */
+   
+  }
+  .contact-info {
+    padding: 1rem; /* Adjust padding for smaller screens */
+    text-align: center; /* Center-align content */
+    gap: 5rem;
+  
+  }
+
+  .contact-info picture img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+
+  .contact-info div {
+    display: flex; /* Ensure flex display */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+    gap: 1rem; /* Add spacing between stacked elements */
+  }
+
+  .contact-info h1 {
+    font-size: 1.5rem; /* Reduce heading size */
+    line-height: 1.2; /* Adjust line height */
+    margin-bottom: 1rem; /* Add space below the heading */
+  }
+
+  .contact-info p {
+    font-size: 0.9rem; /* Reduce font size for the paragraph */
+    margin: 0; /* Remove extra margin */
+  }
+
+  .contact-info svg {
+    font-size: 1rem; /* Adjust icon size */
+    margin-right: 5px; /* Adjust spacing to the right */
+  }
+}
+
+.contact-content {
+  display: flex;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem; /* Default gap for larger screens */
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .contact-content {
+    gap: 5rem; /* Adjust gap to 5rem at 450px and below */
+  }
+}

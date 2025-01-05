@@ -156,7 +156,7 @@ function Services() {
         fontSize: "1rem",
         fontWeight: "500",
         transition: "transform 0.3s ease-in-out", // Keep transition for smooth effect
-        color: "#2c3e50", // Default color
+        color: "black", // Default color
       }}
       data-aos="zoom-in"
       className="service-item"

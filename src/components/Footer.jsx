@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "./Footer.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -46,16 +46,6 @@ const sectionStyle = {
   minWidth: "200px",
   animation: "fadeIn 1.2s ease-in",
 };
-
-
-const contactIconStyle = {
-  display: "flex",
-  alignItems: "center",
-  gap: "12px",
-  fontSize: "1.2rem",
-  animation: "fadeInLeft 1.5s ease",
-};
-
 const socialIconsContainerStyle = {
   display: "flex",
   justifyContent: "center",
@@ -103,6 +93,9 @@ const animations = `
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
 }
+
+
+
 @media (max-width: 768px) {
   .quick-links {
     margin-left: 0;  /* Remove left margin on small screens */
@@ -139,15 +132,15 @@ export default function Footer() {
           {/* Contact Section */}
           <div style={sectionStyle}>
             <h3>Contact Us</h3>
-            <div style={contactIconStyle}>
+            <div id="text" className="contact-text">
               <FontAwesomeIcon icon={faPhone} />
               +9190 214 62299
             </div>
-            <div style={contactIconStyle}>
+            <div id="text" className="contact-text">
               <FontAwesomeIcon icon={faWhatsapp} />
               +9176 664 74280
             </div>
-            <div style={contactIconStyle}>
+            <div id="text" className="contact-text">
               <FontAwesomeIcon icon={faEnvelope} />
               <a
                 href="bkenterprises.rew2021@gmail.com"
@@ -159,7 +152,7 @@ export default function Footer() {
                 bkenterprises.rew2021@gmail.com
               </a>
             </div>
-            <div style={contactIconStyle}>
+            <div id="text" className="contact-text">
               <FontAwesomeIcon icon={faMapMarkerAlt} />
               Dattawadi, Nagpur-440023
             </div>

@@ -160,7 +160,7 @@ const FormSection = styled.section`
   padding: 3rem;
   background: #fff;
   width: 40%;
-  max-width: 700px;
+  max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   animation: fadeInForm 2s ease-in-out;
@@ -255,15 +255,55 @@ const FormSection = styled.section`
     align-self: center;
 
     &:hover {
-      background-color:#f4a261;
+      background-color: #f4a261;
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
   }
 
-  
+  /* Media Query for 768px width */
+  @media (max-width: 768px) {
+    padding: 15px;
+
+    input,
+    textarea,
+    button {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  }
+
+  /* Media Query for 400px width */
+  @media (max-width: 550px) {
+    padding: 10px;
+    max-width: 100%;
+    width: 100%;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    input,
+    textarea,
+    button {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
   }
 `;
+
 
 function Contact() {
   useEffect(() => {
