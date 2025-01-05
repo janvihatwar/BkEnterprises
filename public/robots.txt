@@ -1,0 +1,7 @@
+# This is the robots.txt file for BK Enterprises
+User-agent: *
+Disallow: /private/
+Allow: /
+
+# Specify the location of the sitemap
+Sitemap: https://bkenterprises.netlify.app/sitemap.xml

@@ -1,0 +1,10 @@
+/* Make the menu icon visible on small screens */
+@media (max-width: 768px) {
+    .navbar-links {
+      display: none; /* Hide links by default */
+    }
+    .mobile-menu {
+      display: flex; /* Show mobile menu */
+    }
+  }
+  

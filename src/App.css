@@ -1,0 +1,9 @@
+* {
+    margin: 0; /* Removes all margins */
+    padding: 0; /* Removes all paddings */
+    box-sizing: border-box; /* Ensures consistent box model behavior */
+  }
+  
+  body {
+    font-family: Arial, sans-serif; /* Apply a global font */
+  }
