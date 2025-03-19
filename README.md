@@ -39,7 +39,3 @@ For questions, suggestions, or feedback:
 
 Thank you for exploring **BK Enterprises**! 😊
 
-## *License*
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
